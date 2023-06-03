@@ -4,7 +4,7 @@
  *
  * @param {number[]} nums - The sorted array of integers.
  * @returns {number} - The number of unique elements after removing duplicates.
- * @LINK https://leetcode.com/problems/remove-duplicates-from-sorted-array/?envType=study-plan-v2&envId=top-interview-150
+ * @LINK
  */
 
 const removeDuplicates = function (nums) {
