@@ -1,4 +1,5 @@
 // NEED TO STUDY
+// Study two pointers
 
 const maxProfit = (prices) => {
   let left = 0;
