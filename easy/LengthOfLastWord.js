@@ -1,9 +1,6 @@
-const lengthOfLastWord = (s) => {
-  let lastword = [];
-  const eachWord = s.split(" ").filter((w) => w !== "");
+const case1 = "   fly me   to   the moon  ";
 
-  for (let i = eachWord.length - 1; i > eachWord.length - 2; i--) {
-    lastword.push(eachWord[i]);
-  }
-  return lastword[0].split("").length;
+const lengthOfLastWord = (s) => {
+  const eachWord = s.split(" ").filter((w) => w !== "");
+  return eachWord[eachWord.length - 1].split("").length;
 };
