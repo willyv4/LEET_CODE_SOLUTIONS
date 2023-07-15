@@ -1,4 +1,4 @@
-const majorityElement = function (nums) {
+const majorityElement1 = function (nums) {
   let obj = {};
 
   nums.map((n) => {
@@ -11,7 +11,7 @@ const majorityElement = function (nums) {
 };
 
 // solution i like better
-const majorityElement = function (nums) {
+const majorityElement2 = function (nums) {
   let obj = {};
 
   for (let i = 0; i < nums.length; i++) {
