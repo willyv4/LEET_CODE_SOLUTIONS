@@ -26,11 +26,13 @@ one string longer than the other
 */
 
 const mergeAlternately = (w1, w2) => {
+  if (!w1 && !w2) return "";
+
   let arr = [];
 
   let long = w1.length > w2.length ? w1 : w2;
 
-  for (let i = 0; i <= long.length - 1; i++) {
+  for (let i = 0; i < long.length; i++) {
     if (w1[i]) arr.push(w1[i]);
     if (w2[i]) arr.push(w2[i]);
   }
