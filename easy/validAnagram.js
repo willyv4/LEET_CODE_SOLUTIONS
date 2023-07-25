@@ -50,6 +50,14 @@
  * check if all letters have the same count
  */
 
+const counter = (str) => {
+  let obj = {};
+
+  for (let el of str) obj[el] = obj[el] + 1 || 1;
+
+  return obj;
+};
+
 const isAnagram = (s, t) => {
   if (s.length < 1 && t.length < 1) return true;
   if (s.length !== t.length) return false;
@@ -57,25 +65,7 @@ const isAnagram = (s, t) => {
   const obj = counter(s);
   const obj2 = counter(t);
 
-  for (let key in obj) {
-    if (obj[key] !== obj2[key]) return false;
-  }
+  for (let key in obj) if (obj[key] !== obj2[key]) return false;
 
   return true;
 };
-
-const counter = (str) => {
-  let obj = {};
-
-  for (let i = 0; i < str.length; i++) {
-    !obj[str[i]] ? (obj[str[i]] = 1) : (obj[str[i]] += 1);
-  }
-
-  return obj;
-};
-
-const ex1 = isAnagram("rat", "car");
-
-console.log("Should equal true:", ex1);
-
-// const ex2 = isAnagram("rat", "car");
