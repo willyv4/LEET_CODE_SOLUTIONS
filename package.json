@@ -1,0 +1,22 @@
+{
+  "name": "leet_code",
+  "version": "1.0.0",
+  "description": "leet code solutions and attempts",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willyv4/LEET_CODE_SOLUTIONS.git"
+  },
+  "author": "William Valadez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willyv4/LEET_CODE_SOLUTIONS/issues"
+  },
+  "homepage": "https://github.com/willyv4/LEET_CODE_SOLUTIONS#readme",
+  "dependencies": {
+    "jest": "^29.6.1"
+  }
+}
