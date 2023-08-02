@@ -51,21 +51,20 @@
  */
 
 const counter = (str) => {
-  let obj = {};
+	let obj = {};
 
-  for (let el of str) obj[el] = obj[el] + 1 || 1;
+	for (let el of str) obj[el] = obj[el] + 1 || 1;
 
-  return obj;
+	return obj;
 };
 
 const isAnagram = (s, t) => {
-  if (s.length < 1 && t.length < 1) return true;
-  if (s.length !== t.length) return false;
+	if (s.length !== t.length) return false;
 
-  const obj = counter(s);
-  const obj2 = counter(t);
+	const obj = counter(s);
+	const obj2 = counter(t);
 
-  for (let key in obj) if (obj[key] !== obj2[key]) return false;
+	for (let key in obj) if (obj[key] !== obj2[key]) return false;
 
-  return true;
+	return true;
 };
