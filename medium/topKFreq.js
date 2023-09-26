@@ -135,18 +135,21 @@
  *
  */
 
+// reminder always do the easiest way first
+// work on optimization after
 const arr = [1, 1, 1, 2, 2, 3];
 
 function topKFrequent(nums, k) {
-	let res;
+	let frequencyMap;
+
 	return Object.keys(
 		nums.reduce((acc, num) => {
-			res = acc;
+			frequencyMap = acc;
 			acc[num] = (acc[num] || 0) + 1;
 			return acc;
 		}, {})
 	)
-		.sort((a, b) => res[b] - res[a])
+		.sort((a, b) => frequencyMap[b] - frequencyMap[a])
 		.slice(0, k);
 }
 
