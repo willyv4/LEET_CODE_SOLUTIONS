@@ -1,6 +1,4 @@
-const hasDups = function (nums) {
-	return new Set(nums).size !== nums.length ? false : true;
-};
+const hasDups = (n) => new Set(n).size !== n.length;
 
 const containsDuplicate = (numsArr) => {
 	let obj = {};

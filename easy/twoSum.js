@@ -14,21 +14,16 @@
 //   }
 // }
 
-function twoSum(nums, target) {
-	const complementMap = {};
+// function twoSum(nums, target) {
+// 	const obj = {};
 
-	for (let i = 0; i < nums.length; i++) {
-		const num = nums[i];
-		const complement = target - num;
+// 	for (let i = 0; i < nums.length; i++) {
+// 		const complement = target - nums[i];
 
-		if (complementMap.hasOwnProperty(complement)) {
-			return [complementMap[complement], i];
-		}
+// 		if (complement in obj) return [obj[complement], i];
 
-		complementMap[num] = i;
-	}
+// 		obj[nums[i]] = i;
+// 	}
 
-	return []; // Return an empty array if no solution is found
-}
-
-console.log(twoSum([1, 2, 3, 4, 5, 6], 3));
+// 	return [];
+// }

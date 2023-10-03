@@ -1,18 +1,17 @@
-const majorityElement = (arr) => {
-	let object = {};
-	let result = 0;
-	let answer;
-
-	for (let num of arr) !object[num] ? (object[num] = 1) : (object[num] += 1);
-
-	for (let key in object) {
-		if (object[key] > result) {
-			result = object[key];
-			answer = parseInt(key);
+const twoSum = (nums, target) => {
+	for (let i = 0; i <= nums.length; i++) {
+		for (let j = i + 1; j <= nums.length; j++) {
+			if (nums[i] + nums[j] === target) {
+				console.log([i, j]);
+				return [i, j];
+			}
 		}
 	}
-
-	return answer;
+	console.log([]);
+	return [];
 };
 
-majorityElement([3, 2, 3]);
+console.log(twoSum([2, 7, 11, 15], 9));
+console.log(twoSum([2, 1, 1], 2));
+console.log(twoSum([4, 3, 2], 2));
+console.log(twoSum([], 3));
