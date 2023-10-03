@@ -1,13 +1,24 @@
-const countVowels = (string) => {
-	let vowelCount = {};
-	let vowels = new Set("aeiou");
+const longSequence = (nums) => {
+	if (nums.length === 0) return 0;
 
-	for (let ltr of string.toLowerCase().split("")) {
-		if (!vowels.has(ltr)) continue;
-		vowelCount[ltr] ? (vowelCount[ltr] += 1) : (vowelCount[ltr] = 1);
+	const set = new Set(nums);
+	let long = 0;
+
+	for (let num of set) {
+		if (!set.has(num - 1)) {
+			let currNum = num;
+			let streak = 1;
+
+			while (set.has(currNum + 1)) {
+				currNum++;
+				streak++;
+			}
+
+			long = Math.max(long, streak);
+		}
 	}
 
-	return vowelCount;
+	return long;
 };
 
-console.log(countVowels("Hello World"));
+console.log(longSequence([2, 1, 200, 3, 4, 300]));

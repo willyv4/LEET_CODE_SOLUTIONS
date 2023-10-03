@@ -25,3 +25,28 @@ const longestConsecutive = (nums) => {
 
 	return longestStreak; // Return the length of the longest consecutive subsequence
 };
+
+const longSequence = (nums) => {
+	if (nums.length === 0) return 0;
+
+	const set = new Set(nums);
+	let longestStreak = 0;
+
+	for (let num of set) {
+		if (!set.has(num - 1)) {
+			let currentNum = num;
+			let currentStreak = 1;
+
+			while (set.has(currentNum + 1)) {
+				currentNum++;
+				currentStreak++;
+			}
+
+			longestStreak = Math.max(longestStreak, currentStreak);
+		}
+	}
+
+	return longestStreak;
+};
+
+console.log(longSequence([2, 1, 200, 3, 4, 300]));
