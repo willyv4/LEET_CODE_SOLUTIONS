@@ -10,4 +10,4 @@ const countVowels = (string) => {
 	return vowelCount;
 };
 
-console.log(countVowels("Hello World"));
+console.log(countVowels("Tanner Garner"));
