@@ -193,6 +193,7 @@ const reverseList = (head) => {
 	let prev = null;
 
 	while (curr) {
+		nextNode = curr.next;
 		curr.next = prev;
 		prev = curr;
 		curr = nextNode;
