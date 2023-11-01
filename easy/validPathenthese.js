@@ -37,7 +37,6 @@ const isValid = (string) => {
       stack.push(char);
     } else {
       const recentBracket = stack.pop();
-
       if (obj[recentBracket] !== char) return false;
     }
   }
