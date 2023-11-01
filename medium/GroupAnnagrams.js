@@ -73,15 +73,19 @@
  */
 
 const groupAnagrams = (strs) => {
-	let result = [];
-	let obj = {};
+  let result = [];
+  let obj = {};
 
-	for (let i = 0; i < strs.length; i++) {
-		const match = strs[i].split("").sort().join("");
-		!obj[match] ? (obj[match] = Array(strs[i])) : obj[match].push(strs[i]);
-	}
+  for (let i = 0; i < strs.length; i++) {
+    const match = strs[i].split("").sort().join("");
+    !obj[match] ? (obj[match] = Array(strs[i])) : obj[match].push(strs[i]);
+  }
 
-	for (let key in obj) result.push(obj[key]);
+  for (let key in obj) result.push(obj[key]);
 
-	return result;
+  return result;
 };
+
+// O(K * log(K)): This part accounts for the sorting operation,
+// where K represents the average length of the words in the input array,
+//  and sorting a word of length K has a time complexity of O(K * log(K)).

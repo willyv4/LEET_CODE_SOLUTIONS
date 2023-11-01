@@ -25,3 +25,28 @@ const majorityElement2 = function (nums) {
 
 // majorityElement([3, 2, 3]); // 3
 majorityElement([2, 2, 1, 1, 1, 2, 2]); // 2
+
+// majority Element
+// take in an arr of nums
+// returns the num with most repition in the arr
+
+const majorityElement = (arr) => {
+  let numCounter = {};
+
+  for (let num of arr) {
+    numCounter[num] ? (numCounter[num] += 1) : (numCounter[num] = 1);
+  }
+
+  largest = -Infinity;
+  let majority = null;
+  for (let key in numCounter) {
+    if (numCounter[key] > largest) {
+      largest = numCounter[key];
+      majority = parseInt(key);
+    }
+  }
+
+  return majority;
+};
+
+console.log(majorityElement([3, 2, 3]));
