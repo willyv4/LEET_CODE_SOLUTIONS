@@ -1,20 +1,14 @@
-const maxArea = (height) => {
+const maxArea = (arr) => {
   let left = 0;
-  let right = height.length - 1;
+  let right = arr.length - 1;
   let maxArea = 0;
 
   while (left < right) {
-    const h = Math.min(height[left], height[right]);
-    const w = right - left;
-    const currentArea = h * w;
-
+    const height = Math.min(arr[left], arr[right]);
+    const width = right - left;
+    const currentArea = height * width;
     maxArea = Math.max(maxArea, currentArea);
-
-    if (height[left] < height[right]) {
-      left++;
-    } else {
-      right--;
-    }
+    arr[left] < arr[right] ? left++ : right--;
   }
 
   return maxArea;
