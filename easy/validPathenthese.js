@@ -45,3 +45,27 @@ const isValid = (string) => {
 };
 
 console.log(isValid());
+
+var isValid2 = function (s) {
+  const bracketPairs = new Map([
+    ["(", ")"],
+    ["[", "]"],
+    ["{", "}"],
+  ]);
+
+  const openingBrackets = new Set(["(", "[", "{"]);
+  const stack = [];
+
+  for (let char of s) {
+    if (openingBrackets.has(char)) {
+      stack.push(char);
+    } else {
+      const lastOpenBracket = stack.pop();
+      if (bracketPairs.get(lastOpenBracket) !== char) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+};
