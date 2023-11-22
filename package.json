@@ -18,5 +18,8 @@
   "homepage": "https://github.com/willyv4/LEET_CODE_SOLUTIONS#readme",
   "dependencies": {
     "jest": "^29.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.2"
   }
 }
